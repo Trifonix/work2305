@@ -1,3 +1,7 @@
+/* Каркас приложения на node
+ * Настройка middleware (промежуточное ПО)
+ * Подключение маршрутов, обработка ошибок и запуск сервера через порт 3001 */
+
 const express = require('express');
 const userRoutes = require('./routes/userRoutes');
 
