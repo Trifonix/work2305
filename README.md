@@ -1,6 +1,6 @@
 ## Проект создан с помощью следующих популярных инструментов:
 
-MySQL, phpMyAdmin, Node, Express, JS
+MySQL, phpMyAdmin, Node, Express, JS, mysql2
 
 --------
 
@@ -32,3 +32,7 @@ app.js
 --------
 
 node app.js
+
+========
+
+npm install express mysql2
