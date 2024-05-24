@@ -1,4 +1,7 @@
-// models/userModel.js
+/* Инкапсуляция операций с пользователем в БД
+ * Операции CRUD: создание, чтение, обновление и удаление
+ * Делает код более структурированным, облегчает поддержку приложения */
+
 const connection = require('../db');
 
 async function createUser(name, email, password) {
