@@ -1,3 +1,7 @@
+/* Определение маршрутов приложения, обрабатывающих http запросы
+ * Маршрутизация из Express, связывающая url адреса с обработчиками в контроллере
+ * Делает приложение модульным и структурированным */
+
 const express = require('express');
 const userController = require('../controllers/userController');
 const router = express.Router();
