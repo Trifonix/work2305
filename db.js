@@ -1,18 +1,17 @@
-const mysql = require('mysql2');
+/* Создание пула соединений с БД MySQL
+ * Это позволяет управлять несколькими соединениями
+ * Улучшает производительность приложения */
 
-const connection = mysql.createConnection({
+const mysql = require('mysql2/promise');
+
+const connection = mysql.createPool({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'user_management'
-});
-
-connection.connect(err => {
-    if (err) {
-        console.error("Подключение не удалось: ", err);
-        return;
-    }
-    console.log("Подключились успешно");
+    database: 'user_management',
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
 });
 
 module.exports = connection;
